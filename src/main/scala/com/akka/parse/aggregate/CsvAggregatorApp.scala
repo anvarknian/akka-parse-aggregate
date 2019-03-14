@@ -29,7 +29,7 @@ object CsvAggregatorApp extends App {
     args(2).toInt seconds
   }.toOption.getOrElse({
     println("Period is not supplied or can not be parsed, using default value.")
-    10 minutes
+    60 minutes
   })
 
   if (InputFilePath.toFile.canRead && OutputFilePath.toFile.createNewFile) {
